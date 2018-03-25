@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+    <body onload = "checkCookies()">
+            <h1 onclick="changeText(this)">Click Me</h1>
+
+            <p id = "demo"></p>
+
+            Your Name: <input type="text" id="fname" onchange="myFunc()">
+
+            <div onmouseover="mOver(this)" onmouseout="mOut(this)" style = "background: #D94A38; font-family: Segoe UI; font-size: 22px; color: white;width: 120px; height: 20px; padding: 40px">
+                  Mouse Over Me                 
+            </div>
+
+            <div id = "here"> </div>
+
+            <script>
+                function changeText(id){
+                    id.innerHTML = "Oops";
+                }
+
+                function checkCookies(){
+                    var text = "";
+                    if(navigator.cookieEnabled == true){
+                        text = "Cookies are enabled";
+                    } else {
+                        text = "Cookies are not enabled";
+                    }
+
+                    document.getElementById("demo").innerHTML = text;
+                }
+
+                function myFunc(){
+                     var x = document.getElementById("fname");
+                     x.value = x.value.toLowerCase();
+                }
+
+                function mOver(obj){
+                    obj.innerHTML = "Thankyou";
+                }
+
+                function mOut(obj){
+                    obj.innerHTML = "Mouse Over Me";
+                }
+
+                var dd1 = document.getElementById("here");
+                var hh1 = document.createElement("h1");
+                hh1.setAttribute("id", "aaa");
+               
+               var hh1_txt = document.createTextNode("This is H1");
+
+                 hh1.appendChild(hh1_txt); 
+                dd1.appendChild(hh1);
+                 
+               
+
+            </script>
+    </body>
+
+</html>
