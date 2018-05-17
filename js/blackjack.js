@@ -224,7 +224,7 @@ function win() {
 function draw() {
   $('#resultShow').text('');
   $('#resultShow').removeClass('hide');
-  $('#resultShow').append('<div class="result">You Draw!</div');
+  $('#resultShow').append('<div class="result">Draw!</div');
   playSound('draw');
 }
 
